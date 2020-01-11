@@ -1,110 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_gravity="center_vertical"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:paddingTop="@dimen/DP10"
-    tools:context=".MainActivity"
-    android:id="@+id/main_layout">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Start"
-        android:textColor="@color/colorPrimaryText"
-        android:textSize="@dimen/SPthirty"
-        android:textStyle="bold" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/DP5"
-        app:boxStrokeColor="@color/colorPrimaryDark">
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_gravity="center_vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/DP10"
+        tools:context=".MainActivity"
+        android:id="@+id/main_layout">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/SPthirty"
+            android:textStyle="bold" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtName"
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name(s)"
-            android:inputType="text" />
+            android:layout_margin="@dimen/DP5"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            app:errorEnabled="true"
 
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/DP10"
-        app:boxStrokeColor="@color/colorPrimaryDark">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtPrincipal"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name(s)"
+                android:inputType="text"
+
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/txtPrincipal_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Principal Amount"
-            android:inputType="numberDecimal" />
+            android:layout_margin="@dimen/DP10"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            app:endIconDrawable="@drawable/ic_help"
+            app:endIconTint="@color/colorGray"
+            app:endIconCheckable="true"
+            app:endIconMode="custom"
+            >
 
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/DP10"
-        app:boxStrokeColor="@color/colorPrimaryDark">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Principal Amount"
+                android:inputType="numberDecimal" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtInterest"
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Interest Rate (%)"
-            android:inputType="numberDecimal" />
+            android:layout_margin="@dimen/DP10"
+            app:boxStrokeColor="@color/colorPrimaryDark">
 
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/DP10"
-        app:boxStrokeColor="@color/colorPrimaryDark">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtInterest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Interest Rate (%)"
+                android:inputType="numberDecimal" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtYears"
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:id="@+id/txtYears_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="# of Years"
-            android:inputType="number" />
+            android:layout_margin="@dimen/DP10"
+            app:boxStrokeColor="@color/colorPrimaryDark"
+            app:endIconDrawable="@drawable/ic_help"
+            app:endIconTint="@color/colorGray"
+            app:endIconCheckable="true"
+            app:endIconMode="custom">
 
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtYears"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="# of Years"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnEnter"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/DP10"
-        android:background="@color/colorAccent"
-        android:elevation="@dimen/DP10"
-        android:text="Enter"
-        android:textAllCaps="true"
-        android:textColor="@color/colorWhite" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEnter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/DP10"
+            android:background="@color/colorPrimary"
+            android:elevation="@dimen/DP10"
+            android:text="Enter"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/DP10"
+            android:background="@color/colorGray"
+            android:elevation="@dimen/DP10"
+            android:text="Settings"
+            android:textAllCaps="true"
+            android:textColor="@color/colorWhite" />
 
-    <TextView
-        android:id="@+id/txtToSignup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/DP10"
-        android:text="Calculating Mortgage Payments in a few Simple Steps"
-        android:textColor="@color/colorPrimaryText"
-        android:textSize="@dimen/SPsixteen"
-        android:textStyle="bold" />
+        <TextView
+            android:id="@+id/txtToSignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/DP10"
+            android:text="Calculating Mortgage Payments in a few Simple Steps"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/SPsixteen"
+            android:textStyle="bold" />
 
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
