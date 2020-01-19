@@ -1,4 +1,4 @@
-# EzMortgage
+# EzTest
 Lab for Intro to UI using Android.
 
 
