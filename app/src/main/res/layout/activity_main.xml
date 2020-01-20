@@ -43,7 +43,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/DP10"
-            android:background="@color/colorGray"
+            android:background="@color/colorAccent"
             android:elevation="@dimen/DP10"
             android:text="Settings"
             android:textAllCaps="true"
